@@ -1,0 +1,14 @@
+﻿@model IndexVM
+@{
+    ViewData["Title"] = $"Cars";
+}
+
+<h1 style="color:steelblue">@Model.Name @Model.SeriesName</h1>
+
+<ul>
+    @foreach (Car car in Model.Cars)
+    {
+        <li>@car.Name (Color:@car.Color)</li>
+    }
+   
+</ul>

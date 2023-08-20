@@ -4,10 +4,9 @@ namespace CarsWebApp.ViewModels
 {
     public class IndexVM
     {
-        public Brand Brands { get; set; }
-
         public List<Series> SeriesList { get; set; }
-
+        public List<Car> Cars { get; set; }
         public string Name { get; set; }
+        public string SeriesName { get; set; }
     }
 }

@@ -8,7 +8,7 @@
 <ul>
     @foreach (Series carSeries in Model.SeriesList)
     {
-        <a asp-controller="Car" asp-action="Index" asp-route-id="@carSeries.Id" style="text-decoration:none; cursor:pointer; color:black;">
+        <a asp-controller="Car" asp-action="Index" asp-route-id="@carSeries.Id" asp-route-BrandName="@Model.Name" asp-route-SeriesName="@carSeries.Name" style="text-decoration:none; cursor:pointer; color:black;">
         <li>@carSeries.Name</li></a>
     }
 </ul>
