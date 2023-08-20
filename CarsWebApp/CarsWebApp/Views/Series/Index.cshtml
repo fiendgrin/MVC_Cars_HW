@@ -1,0 +1,14 @@
+﻿@model IndexVM
+@{
+    ViewData["Title"] = "Car Brand Series";
+}
+
+<h1 style="color:lightseagreen">@Model.Name</h1>
+
+<ul>
+    @foreach (Series carSeries in Model.SeriesList)
+    {
+        <a asp-controller="Car" asp-action="Index" asp-route-id="@carSeries.Id" style="text-decoration:none; cursor:pointer; color:black;">
+        <li>@carSeries.Name</li></a>
+    }
+</ul>
