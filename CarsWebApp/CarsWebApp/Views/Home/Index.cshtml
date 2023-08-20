@@ -1,5 +1,4 @@
-﻿Home-Index
-@model List<Brand>
+﻿@model List<Brand>
 @{
     ViewData["Title"] = "Car Brands";
 }
@@ -11,6 +10,6 @@
     @foreach (Brand brand in Model)
     {
         <a asp-controller="Home" asp-action="Detail" asp-route-id="@brand.Id" style="text-decoration:none; cursor:pointer; color:black;">
-        <li>@brand.Id. @brand.Name (manufacturer: @brand.Manufacturer)</li></a>
+        <li>@brand.Id. @brand.Name</li></a>
     }
 </ul>

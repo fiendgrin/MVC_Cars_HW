@@ -20,5 +20,14 @@ namespace CarsWebApp.Controllers
             return View(_brands);
         }
 
+        public IActionResult Detail(int? id)
+        {
+            if (id == null) return BadRequest("Brand Id is required");
+
+            if (!_brands.Exists(brand => brand.Id == id)) return NotFound($"{id} is not an existing Brand Id");
+
+            return View(_brands.Find(brand => brand.Id == id));
+        }
+
     }
 }

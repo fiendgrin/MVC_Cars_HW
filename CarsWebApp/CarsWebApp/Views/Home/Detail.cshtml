@@ -1,0 +1,15 @@
+﻿@model Brand
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1 style="color:blueviolet">Brand Details</h1>
+
+<ul>
+    <li>@Model.Id</li>
+    <li>@Model.Name</li>
+    <li>@Model.Manufacturer</li>
+    <li>@Model.Foundation</li>
+    <a asp-controller="Series" asp-action="Index" asp-route-id="@Model.Id" asp-route-name="@Model.Name" style="text-decoration:none; cursor:pointer; color:black;">
+    <li style="color:red;  list-style-type:none; ">Get Series</li></a>
+</ul>
